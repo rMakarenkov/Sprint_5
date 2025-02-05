@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class TestRegistration:
 
-    def test_register_new_user_success_operation(self, driver, generate_email_and_password):
+    def test_registration_new_user_success_operation(self, driver, generate_email_and_password):
         driver.get(credentials.BASE_URL)
         WebDriverWait(driver, 3).until(EC.element_to_be_clickable(locators.BUTTON_LOGIN_IN_ACC)).click()
         WebDriverWait(driver, 3).until(EC.element_to_be_clickable(locators.BUTTON_LINK_REGISTRATION_ACC)).click()
