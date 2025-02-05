@@ -19,3 +19,4 @@ BUTTON_REGISTRATION = (By.XPATH, '//button[text()="Зарегистрирова�
 INPUT_NAME_IN_REG_PAGE = (By.XPATH, '//*[@id="root"]//fieldset[1]/div/div/input')
 INPUT_EMAIL_IN_REG_PAGE = (By.XPATH, '//*[@id="root"]//fieldset[2]/div/div/input')
 INPUT_PASSWORD_IN_REG_PAGE = (By.XPATH, '//*[@id="root"]//fieldset[3]/div/div/input')
+LABEL_INVALID_PASSWORD = (By.XPATH, '//p[text()="Некорректный пароль"]')
