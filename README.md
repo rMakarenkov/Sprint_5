@@ -1,1 +1,4 @@
-# Sprint_5
+- Имя проекта: Sprint_5 - автоматизация тестирования c помощью Selenium
+- Технологии: Pytest + Selenium
+- Установка зависимостей: pip install -r requirements.txt
+- Команда для запуска: pytest -v

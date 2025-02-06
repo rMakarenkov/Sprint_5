@@ -1,9 +1,9 @@
 import credentials
 import locators
-import time
 
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
+
 
 class TestConstructor:
     def test_clickability_constructor_elements_success_operations(self, driver):
