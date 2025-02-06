@@ -20,7 +20,7 @@ class TestRegistration:
         driver.find_element(*locators.INPUT_EMAIL_IN_AUTH_PAGE).send_keys(generate_email_and_password.get('email'))
         driver.find_element(*locators.INPUT_PASSWORD_IN_AUTH_PAGE).send_keys(generate_email_and_password.get('password'))
         driver.find_element(*locators.BUTTON_LOGIN).click()
-        # проверяем, что зарегистрированный пользователь может авторизоваться
+        # проверяем, что зарегистрированный пользователь успешно авторизовался
         assert WebDriverWait(driver, 3).until(
             ec.visibility_of_element_located(locators.LABEL_COLLECT_BURGER)).text == 'Соберите бургер'
 
