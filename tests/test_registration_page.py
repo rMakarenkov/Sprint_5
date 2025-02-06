@@ -25,7 +25,7 @@ class TestRegistration:
             ec.visibility_of_element_located(locators.LABEL_COLLECT_BURGER)).text == 'Соберите бургер'
 
 
-    def test_registration_new_user_invalid_password_failed_operation(self, driver, generate_email_and_password):
+    def test_registration_new_user_invalid_password_failed_operation(self, driver):
         driver.get(credentials.AUTH_URL)
         WebDriverWait(driver, 3).until(ec.element_to_be_clickable(locators.BUTTON_LINK_REGISTRATION_ACC)).click()
         WebDriverWait(driver, 3).until(ec.visibility_of_element_located(locators.REG_PAGE_TITTLE))
