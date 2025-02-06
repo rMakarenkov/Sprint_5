@@ -8,20 +8,17 @@ from selenium import webdriver
 @pytest.fixture(scope="function")
 def driver():
     try:
-        print("\nStart browser chrome for test...")
         driver = webdriver.Chrome()
         driver.maximize_window()
         yield driver
-        print("\nQuit browser...")
         driver.quit()
 
     except Exception as e:
-        print(f"Error type: {type(e).__name__}"
-              f"\nMessage: {e}")
+        print(f"Error type: {type(e).__name__}")
 
 
-@pytest.fixture(scope="session")
-def generate_email_and_password():
+@pytest.fixture(scope="function")
+def generate_email_and_password() -> dict:
     characters = string.ascii_letters + string.digits + string.punctuation
     name_and_password = {
         'email': ''.join(random.choice(characters) for _ in range(6)) + '@gmail.com',
